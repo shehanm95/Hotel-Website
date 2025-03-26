@@ -235,6 +235,7 @@ hr {
     border: 1px solid gray;
     overflow: hidden;
     display: flex;
+    margin-bottom: 10px;
     flex-direction: column;
     padding: 10px;
     box-shadow:
