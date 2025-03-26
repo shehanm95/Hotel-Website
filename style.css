@@ -63,8 +63,76 @@ nav ul li {
 
 nav a {
     color: var(--lite-font-color);
-    ;
+
     text-decoration: none;
+}
+
+/* nav bar animations */
+.nav-link,
+.nav-selected {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 5px;
+
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 30px;
+    height: 3px;
+    background-color: var(--lite-font-color);
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.nav-selected::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 30px;
+    height: 3px;
+    background-color: var(--lite-font-color);
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* nav bar social media icons */
+.flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.socialmediaicons {
+    gap: 10px;
+    margin-right: 10px
+}
+
+@media (max-width:473px) {
+    .socialmediaicons {
+        display: none;
+    }
+}
+
+.socialmediaicons .fa {
+    background-color: var(--lite-font-color);
+    color: var(--background-color-dark);
+    padding: 15px;
+    padding-top: 13px;
+    padding-bottom: 15px;
+    width: 43px;
+    height: 43px;
+    margin-bottom: 0.6rem;
+    border-radius: 50%;
 }
 
 main {
@@ -241,6 +309,18 @@ hr {
 section ul {
     list-style: disc;
     margin: 1rem 0 1rem 2rem;
+}
+
+.banquets-holder {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.banquets-card img {
+    width: 320px;
 }
 
 /* ====================== contact =============================*/
